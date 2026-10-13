@@ -1,0 +1,35 @@
+{
+    "tugas": [{
+            "id": "1",
+            "judul": "Lab 10 event delegation",
+            "matkul": "Pemrograman Web",
+            "deadline": "2026-10-08",
+            "selesai": false
+        },
+        {
+            "id": "2",
+            "judul": "Ringkasan materi async/await",
+            "matkul": "Pemrograman Web",
+            "deadline": "2026-10-10",
+            "selesai": false
+        }
+    ],
+    "matkul": [{
+            "id": "1",
+            "nama": "Pemrograman Web"
+        },
+        {
+            "id": "2",
+            "nama": "Basis Data"
+        },
+        {
+            "id": "3",
+            "nama": "Jaringan Komputer"
+        },
+        {
+            "id": "4",
+            "nama": "Sistem Operasi"
+        }
+    ],
+    "$schema": "./node_modules/json-server/schema.json"
+}

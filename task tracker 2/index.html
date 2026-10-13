@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker Kuliah v2 - REST API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📋 Task Tracker Kuliah v2</h1>
+        </header>
+
+        <input type="text" id="search-input" placeholder="Cari tugas..." class="search-box">
+
+        <form id="task-form">
+            <input type="text" id="judul" placeholder="Judul tugas (min. 3 karakter)">
+
+            <div class="form-row">
+                <select id="matkul">
+                    <option value="" disabled selected>Pilih Mata Kuliah...</option>
+                </select>
+                <input type="date" id="deadline">
+                <button type="submit" id="btn-tambah">Tambah</button>
+            </div>
+            <div id="error-message" class="error-text hidden"></div>
+        </form>
+
+        <div class="toolbar">
+            <div class="filters" id="filters">
+                <button class="filter-btn on" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="aktif">Aktif</button>
+                <button class="filter-btn" data-filter="selesai">Selesai</button>
+            </div>
+            <div id="counter" class="counter-text">0 tugas aktif</div>
+        </div>
+
+        <div id="loading-state" class="state-container hidden">Memuat data dari server...</div>
+
+        <div id="error-state" class="state-container hidden">
+            <p id="error-state-msg">Gagal memuat data.</p>
+            <button id="btn-retry" class="retry-btn">Coba Lagi</button>
+        </div>
+
+        <ul id="task-list"></ul>
+        <div id="empty-message" class="empty-state hidden">Tidak ada tugas dalam daftar ini.</div>
+    </div>
+</body>
+
+</html>
